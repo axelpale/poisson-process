@@ -53,10 +53,21 @@ The `create` constructor takes in two parameters. The `averageIntervalMs` is an 
 
 Start the process; begin to call the `triggerFunction`.
 
+    p.start()
+
 ### p.stop()
 
 Stop the process; do not anymore call the `triggerFunction`.
 
+    p.stop()
+
+### PoissonProcess.sample(average)
+
+The `sample` provides a raw acces to the underlying generator for the call intervals. It returns a number; a sample from the exponential distribution with the mean `average`.
+
+    PoissonProcess.sample(500)  // returns 323.02...
+    PoissonProcess.sample(500)  // returns 941.33...
+    PoissonProcess.sample(500)  // returns 609.86...
 
 
 ## Theory
