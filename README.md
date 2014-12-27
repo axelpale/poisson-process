@@ -1,19 +1,19 @@
 # poisson-process.js<sup>v0.1.0</sup>
 
-A JavaScript library to generate events in realistically varying time intervals to _improve realism in your games or animations_. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes.
+A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes.
 
 
 
 ## Usage
 
-It is simple; you specify an _average call interval_ in milliseconds, a _function to be called_ and then _start_ the process.
+It is simple; you specify an __average call interval__ in milliseconds, a __function to be called__ and then __start__ the process.
 
     var p = PoissonProcess.create(500, function message() {
       console.log('A message arrived.')
     })
     p.start()
 
-Now the `message` function will be called each 500 milliseconds _in average_. The delay from previous call can vary from near 0 milliseconds to a delay that is significantly longer than the given average, even though the both ends are very unlikely.
+Now the `message` function will be called each 500 milliseconds __in average__. The delay from previous call can vary from near 0 milliseconds to a delay that is significantly longer than the given average, even though the both ends are very unlikely.
 
 The process is paused by:
 
@@ -51,17 +51,17 @@ The constructor takes in two parameters. `averageIntervalMs` is an integer and t
 
 ### p.start()
 
-Start the process; begin to call the `triggerFunction`.
+Start the process; begin to call `triggerFunction`.
 
 ### p.stop()
 
-Stop the process; do not anymore call the `triggerFunction`.
+Stop the process; do not anymore call `triggerFunction`.
 
 
 
 ## Theory
 
-The generator is based on the mathematical concept of Poisson process. It is a process usually perceived in the frequency of earthquakes, arriving mail and, in general, other events where a single event, like an arriving letter, does not much depend on the others.
+The poisson-process.js is based on the mathematical concept of Poisson process. It is a process usually perceived in the frequency of earthquakes, arriving mail and, in general, the other series of events where a single event, like an arriving letter, does not much depend on the other events.
 
 It is well known that inter-arrival times of the events in a Poisson process follow an exponential distribution with a rate parameter *r*. It is also known that the multiplicative inverse of *r*, *1/r* is the average of the inter-arrival times. Therefore to generate an event each *m* milliseconds in average, we sample the exponential distribution of the rate of *1/m*.
 
