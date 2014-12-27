@@ -1,0 +1,21 @@
+{
+  "name": "poisson-process",
+  "version": "0.1.0",
+  "description": "Generate events in realistically varying time intervals to improve realism in games or animations.",
+  "homepage": "https://github.com/axelpale/poisson-process",
+  "main": "poisson-process.js",
+  "author": {
+    "name": "Akseli Palen",
+    "email": "akseli.palen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axelpale/poisson-process.git"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/axelpale/poisson-process/blob/master/LICENSE"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
