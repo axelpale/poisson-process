@@ -13,7 +13,7 @@ It is simple; you specify an __average call interval__ in milliseconds, a __func
     })
     p.start()
 
-Now the `message` function will be called each 500 milliseconds __in average__. The delay from previous call can vary from near 0 milliseconds to a delay that is significantly longer than the given average, even though the both ends are very unlikely.
+Now the `message` function will be called each 500 milliseconds __in average__. The delay from a previous call can vary from near 0 milliseconds to a time that is significantly longer than the given average, even though the both ends are very unlikely.
 
 The process is paused by:
 
