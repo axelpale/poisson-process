@@ -43,7 +43,7 @@ The process is paused by:
 
 ### PoissonProcess.create(averageIntervalMs, triggerFunction)
 
-The constructor takes in two parameters. `averageIntervalMs` is an integer and the average interval in milliseconds to call the `triggerFunction`. `triggerFunction` takes no parameters and does not have to return anything.
+The `create` constructor takes in two parameters. The `averageIntervalMs` is an integer and the average interval in milliseconds to call the `triggerFunction`. The `triggerFunction` takes no parameters and does not have to return anything.
 
     var p = PoissonProcess.create(500, function message() {
       console.log('A message arrived.')
@@ -51,11 +51,11 @@ The constructor takes in two parameters. `averageIntervalMs` is an integer and t
 
 ### p.start()
 
-Start the process; begin to call `triggerFunction`.
+Start the process; begin to call the `triggerFunction`.
 
 ### p.stop()
 
-Stop the process; do not anymore call `triggerFunction`.
+Stop the process; do not anymore call the `triggerFunction`.
 
 
 
