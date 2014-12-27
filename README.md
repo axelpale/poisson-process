@@ -2,7 +2,7 @@
 
 A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes.
 
-
+![Constant vs Poisson process](../master/doc/cars.gif?raw=true)
 
 ## Usage
 
