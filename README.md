@@ -1,5 +1,8 @@
 # poisson-process.js<sup>v0.2.0</sup>
 
+[![npm](https://img.shields.io/npm/v/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
+![dependencies](https://img.shields.io/badge/dependencies-none-green.svg?style=flat) [![licence](https://img.shields.io/npm/l/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
+
 A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes. The underlying mathematical concept is called the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process).
 
 ![Constant vs Poisson process](../master/doc/cars.gif?raw=true)
