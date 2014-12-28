@@ -2,6 +2,7 @@
   "name": "poisson-process",
   "version": "0.2.0",
   "description": "Generate events in realistically varying time intervals to improve realism in games or animations.",
+  "keywords": ["random", "timer", "interval", "stochastic", "simulation", "latency", "animation"],
   "homepage": "https://github.com/axelpale/poisson-process",
   "main": "poisson-process.js",
   "author": {
@@ -12,10 +13,7 @@
     "type": "git",
     "url": "git://github.com/axelpale/poisson-process.git"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/axelpale/poisson-process/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.10",
