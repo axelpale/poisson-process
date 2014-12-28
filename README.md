@@ -80,9 +80,18 @@ More detailed and enjoyable introduction to the theory is given by [Jeff Preshin
 
 
 
+## Notes for developers
+
+Run tests with `$ npm test`. Build with `$ gulp`.
+
+
+
 ## Todo
 
 - More [accurate timing](http://www.sitepoint.com/creating-accurate-timers-in-javascript/).
+- Examples.
+
+
 
 ## Versioning
 
