@@ -1,7 +1,7 @@
 {
   "name": "poisson-process",
   "version": "0.2.1",
-  "description": "Generate events in realistically varying time intervals to improve realism in games or animations.",
+  "description": "Call functions in naturally varying time intervals to improve realism and natural unpredictability in games or animations.",
   "keywords": ["random", "timer", "interval", "stochastic", "simulation", "latency", "animation"],
   "homepage": "https://github.com/axelpale/poisson-process",
   "main": "poisson-process.js",
