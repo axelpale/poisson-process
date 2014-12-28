@@ -1,4 +1,4 @@
-# poisson-process.js<sup>v0.1.0</sup>
+# poisson-process.js<sup>v0.2.0</sup>
 
 A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes.
 
@@ -79,6 +79,10 @@ It is well known that inter-arrival times of the events in a Poisson process fol
 More detailed and enjoyable introduction to the theory is given by [Jeff Preshing](http://preshing.com/) at [How to Generate Random Timings for a Poisson Process](http://preshing.com/20111007/how-to-generate-random-timings-for-a-poisson-process/).
 
 
+
+## Todo
+
+- More [accurate timing](http://www.sitepoint.com/creating-accurate-timers-in-javascript/).
 
 ## Versioning
 
