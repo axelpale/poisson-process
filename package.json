@@ -1,6 +1,6 @@
 {
   "name": "poisson-process",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate events in realistically varying time intervals to improve realism in games or animations.",
   "keywords": ["random", "timer", "interval", "stochastic", "simulation", "latency", "animation"],
   "homepage": "https://github.com/axelpale/poisson-process",
