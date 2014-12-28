@@ -58,7 +58,7 @@ describe('PoissonProcess', function () {
 
       // Allowed deviation of sampled interval from
       // the population interval.
-      var deviation = 2; // ms
+      var deviation = 5; // ms
 
       var startTimestamp = Date.now(); // ms
 
