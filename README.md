@@ -1,8 +1,12 @@
 # poisson-process.js<sup>v0.2.0</sup>
 
-A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes.
+A JavaScript library to generate events in realistically varying time intervals to __improve realism in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes. The underlying mathematical concept is called the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process).
 
 ![Constant vs Poisson process](../master/doc/cars.gif?raw=true)
+
+In the animation above, the blue cars drive by in constant time intervals and the red ones in more natural, randomised intervals typical for the Poisson process.
+
+
 
 ## Usage
 
@@ -72,7 +76,7 @@ The `sample` provides a raw acces to the underlying generator for the call inter
 
 ## Theory
 
-The poisson-process.js is based on the mathematical concept of Poisson process. It is a process usually perceived in the frequency of earthquakes, arriving mail and, in general, the other series of events where a single event, like an arriving letter, does not much depend on the other events.
+The poisson-process.js is based on the mathematical concept of the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process). It is a stochastic process that is usually perceived in the frequency of earthquakes, arriving mail and, in general, the other series of events where a single event, like an arriving letter, does not much depend on the other events, like the preceding or following letters.
 
 It is well known that inter-arrival times of the events in a Poisson process follow an exponential distribution with a rate parameter *r*. It is also known that the multiplicative inverse of *r*, *1/r* is the average of the inter-arrival times. Therefore to generate an event each *m* milliseconds in average, we sample the exponential distribution of the rate of *1/m*.
 
