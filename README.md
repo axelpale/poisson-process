@@ -25,7 +25,7 @@ The process is paused by:
 
 
 
-## Installation (not yet available)
+## Installation
 
 ### Browsers
 
