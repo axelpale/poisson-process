@@ -11,20 +11,9 @@ In the animation above, the blue cars drive by in constant time intervals and th
 
 
 
-## Usage
+## Examples
 
-It is simple; you specify an __average call interval__ in milliseconds, a __function to be called__ and then __start__ the process.
-
-    var p = PoissonProcess.create(500, function message() {
-      console.log('A message arrived.')
-    })
-    p.start()
-
-Now the `message` function will be called each 500 milliseconds __in average__. The delay from a previous call can vary from near 0 milliseconds to a time that is significantly longer than the given average, even though the both ends are very unlikely.
-
-The process is paused by:
-
-    p.stop()
+- [Poisson's Stroboscope](https://rawgit.com/axelpale/poisson-process/master/examples/strobo/index.html)
 
 
 
@@ -43,6 +32,23 @@ The process is paused by:
 ### AMD & Require.js
 
     define(['scripts/poisson-process'], function (PoissonProcess) { ... });
+
+
+
+## Usage
+
+It is simple; you specify an __average call interval__ in milliseconds, a __function to be called__ and then __start__ the process.
+
+    var p = PoissonProcess.create(500, function message() {
+      console.log('A message arrived.')
+    })
+    p.start()
+
+Now the `message` function will be called each 500 milliseconds __in average__. The delay from a previous call can vary from near 0 milliseconds to a time that is significantly longer than the given average, even though the both ends are very unlikely.
+
+The process is paused by:
+
+    p.stop()
 
 
 

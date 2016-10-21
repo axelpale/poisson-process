@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Poisson's Stroboscope</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-size: 16px;
+      background: #222;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .info {
+      position: absolute;
+      top: 0em;
+      left: 1em;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h2>Poisson's Stroboscope</h2>
+    <p>A strobe with Poisson distributed flickering. The timing is powered by <a href="https://github.com/axelpale/poisson-process">poisson-process.js</a>.</p>
+    <p id="debug"></p>
+  </div>
+  <script src="../../poisson-process.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
