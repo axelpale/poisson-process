@@ -13,7 +13,7 @@ In the animation above, the blue cars drive by in constant time intervals and th
 
 ## Examples
 
-- [Poisson's Stroboscope](https://rawgit.com/axelpale/poisson-process/master/examples/strobo/index.html)
+- [Poisson's Stroboscope](https://rawgit.com/axelpale/poisson-process/master/examples/stroboscope/index.html)
 
 
 
