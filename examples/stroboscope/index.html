@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
   <title>Poisson's Stroboscope</title>
 
   <style>
@@ -15,7 +15,7 @@
 
     body {
       font-size: 16px;
-      background: #222;
+      background: #777;
       font-family: sans-serif;
       color: white;
     }
@@ -26,16 +26,19 @@
       left: 1em;
       z-index: 1;
     }
-
   </style>
+
 </head>
 <body>
+
   <div class="info">
     <h2>Poisson's Stroboscope</h2>
     <p>A strobe with Poisson distributed flickering, interval averaging at 500 ms. The timing is powered by <a href="https://github.com/axelpale/poisson-process">poisson-process.js</a>.</p>
     <p id="debug"></p>
   </div>
+
   <script src="../../poisson-process.js"></script>
   <script src="./app.js"></script>
+
 </body>
 </html>
