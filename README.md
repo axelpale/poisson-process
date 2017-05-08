@@ -1,4 +1,4 @@
-# poisson-process.js<sup>v0.2.1</sup>
+# poisson-process.js<sup>v0.2.2</sup>
 
 [![npm](https://img.shields.io/npm/v/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
 ![dependencies](https://img.shields.io/badge/dependencies-none-green.svg?style=flat) [![licence](https://img.shields.io/npm/l/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
