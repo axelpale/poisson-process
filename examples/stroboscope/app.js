@@ -22,9 +22,9 @@ var p = PoissonProcess.create(interval, function () {
 
   // We change the background color according to the current color state.
   if (bgState) {
-    bg.style.backgroundColor = 'black';
+    bg.style.backgroundColor = 'mediumblue';
   } else {
-    bg.style.backgroundColor = 'red';
+    bg.style.backgroundColor = 'blue';
   }
 
   // We change the color state.
