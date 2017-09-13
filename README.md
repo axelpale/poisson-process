@@ -52,10 +52,10 @@ The process is paused by:
 
 If you desire just numbers, generate intervals by:
 
-   > PoissonProcess.sample(500)
-   389.33242512
-   > PoissonProcess.sample(500)
-   506.58621391
+    > PoissonProcess.sample(500)
+    389.33242512
+    > PoissonProcess.sample(500)
+    506.58621391
 
 
 ## API
