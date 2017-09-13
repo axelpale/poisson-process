@@ -1,4 +1,4 @@
-# poisson-process.js<sup>v0.2.2</sup>
+# poisson-process.js<sup>v0.2.3</sup>
 
 [![npm](https://img.shields.io/npm/v/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
 ![dependencies](https://img.shields.io/badge/dependencies-none-green.svg?style=flat) [![licence](https://img.shields.io/npm/l/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
@@ -14,7 +14,7 @@ In the animation above, the blue cars drive by in constant time intervals and th
 ## Examples
 
 - [Poisson's Stroboscope](https://rawgit.com/axelpale/poisson-process/master/examples/stroboscope/index.html)
-
+- [Sprinkler.js](https://github.com/axelpale/sprinkler#examples) depends on poisson-process.js. Look for the examples section.
 
 
 ## Installation
@@ -106,14 +106,13 @@ A detailed and enjoyable introduction to the theory is given by [Jeff Preshing](
 
 ## Notes for developers
 
-Run tests with `$ npm test`. Build with `$ gulp`.
+Run tests with `$ npm test`. Build with `$ npm run build`.
 
 
 
 ## Todo
 
 - More [accurate timing](http://www.sitepoint.com/creating-accurate-timers-in-javascript/).
-- Examples.
 
 
 
