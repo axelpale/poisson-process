@@ -96,9 +96,11 @@ The `sample` provides a raw access to the underlying generator for the call inte
 
 The poisson-process.js is based on the mathematical concept of the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process). It is a stochastic process that is usually perceived in the frequency of earthquakes, arriving mail and, in general, the other series of events where a single event, like an arriving letter, does not much depend on the other events, like the preceding or following letters.
 
-It is well known that inter-arrival times of the events in a Poisson process follow an exponential probability distribution with a rate parameter *r*. It is also known that the multiplicative inverse of *r*, *1/r* is the mean of the inter-arrival times. Therefore to generate an event each *m* milliseconds in average, we sample the exponential distribution of the rate *1/m*. The variance of an exponential distribution is known to be _1/(r*r)_.
+It is known that inter-arrival times of the events in a Poisson process follow an [exponential probability distribution](https://en.wikipedia.org/wiki/Exponential_distribution) with a rate parameter *r*. It is also known that the multiplicative inverse of *r*, *1/r* is the mean of the inter-arrival times. Therefore to generate an event each *m* milliseconds in average, we sample the exponential distribution of the rate *1/m*. Sampling the exponential distribution is rather simple as it follows the rule:
 
-In our test suite, we __proof__ by simulation that our sampling method forms an exponential distribution with correct mean and variance. We also proof that this leads to a Poisson distributed behavior. Run the test suite by first `$ npm install` and then `$ npm test`.
+![Sampling from an exponential distribution](doc/sampling.png?raw=true)
+
+In our test suite, we __proof__ by simulation that our sampling method forms an exponential distribution with correct mean and variance. The variance of an exponential distribution is known to be _1/(r*r)_. We also proof that this leads to a Poisson distributed behavior. Run the test suite by first `$ npm install` and then `$ npm test`.
 
 A detailed and __enjoyable introduction__ to the theory is given by [Jeff Preshing](http://preshing.com/) at [How to Generate Random Timings for a Poisson Process](http://preshing.com/20111007/how-to-generate-random-timings-for-a-poisson-process/). Wikipedia's article [Poisson point process](https://en.wikipedia.org/wiki/Poisson_point_process) also provides a comprehensive introduction and a set of references.
 
@@ -107,12 +109,6 @@ A detailed and __enjoyable introduction__ to the theory is given by [Jeff Preshi
 ## Notes for developers
 
 Run tests with `$ npm test`. Build with `$ npm run build`.
-
-
-
-## Todo
-
-- More [accurate timing](http://www.sitepoint.com/creating-accurate-timers-in-javascript/).
 
 
 
