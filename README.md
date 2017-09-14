@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
 ![dependencies](https://img.shields.io/badge/dependencies-none-green.svg?style=flat) [![licence](https://img.shields.io/npm/l/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
 
-A JavaScript library to generate naturally varying time intervals to __improve realism and natural unpredictability in your games or animations__. For example it can be used to simulate aliens walking by a window or cars trying to drive over your character on a busy road. It can also be used to simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes. The underlying mathematical concept is called the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process).
+A JavaScript library to generate naturally varying time intervals. It __improves realism and natural unpredictability in your games or animations__ like aliens walking by a window, or cars trying to drive over your character on a busy road. It __removes bottlenecks in distributed systems__ by adding [jitter](http://highscalability.com/blog/2012/4/17/youtube-strategy-adding-jitter-isnt-a-bug.html) that prevents [thundering herd problem](https://en.wikipedia.org/wiki/Thundering_herd_problem). It can also simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes. The underlying mathematical concept is called the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process).
 
 ![Constant vs Poisson process](../master/doc/cars.gif?raw=true)
 
@@ -35,7 +35,7 @@ In the animation above, the blue cars drive by in constant time intervals and th
 
 
 
-## Usage
+## Usage 
 
 It is simple; you specify an __average call interval__ in milliseconds, a __function to be called__ and then __start__ the process.
 
@@ -98,9 +98,9 @@ The poisson-process.js is based on the mathematical concept of the [Poisson proc
 
 It is well known that inter-arrival times of the events in a Poisson process follow an exponential probability distribution with a rate parameter *r*. It is also known that the multiplicative inverse of *r*, *1/r* is the mean of the inter-arrival times. Therefore to generate an event each *m* milliseconds in average, we sample the exponential distribution of the rate *1/m*. The variance of an exponential distribution is known to be _1/(r*r)_.
 
-In our test suite, we proof by simulation that our sampling method forms an exponential distribution with correct mean and variance. We also proof that this leads to a Poisson distributed behavior. Run the test suite by first `$ npm install` and then `$ npm test`.
+In our test suite, we __proof__ by simulation that our sampling method forms an exponential distribution with correct mean and variance. We also proof that this leads to a Poisson distributed behavior. Run the test suite by first `$ npm install` and then `$ npm test`.
 
-A detailed and enjoyable introduction to the theory is given by [Jeff Preshing](http://preshing.com/) at [How to Generate Random Timings for a Poisson Process](http://preshing.com/20111007/how-to-generate-random-timings-for-a-poisson-process/). Wikipedia's article [Poisson point process](https://en.wikipedia.org/wiki/Poisson_point_process) also provides a comprehensive introduction and a set of references.
+A detailed and __enjoyable introduction__ to the theory is given by [Jeff Preshing](http://preshing.com/) at [How to Generate Random Timings for a Poisson Process](http://preshing.com/20111007/how-to-generate-random-timings-for-a-poisson-process/). Wikipedia's article [Poisson point process](https://en.wikipedia.org/wiki/Poisson_point_process) also provides a comprehensive introduction and a set of references.
 
 
 
