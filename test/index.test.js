@@ -1,9 +1,13 @@
-var unit = require('../poisson-process.js');
+/* eslint-disable max-lines,max-statements */
+/* eslint-disable no-magic-numbers,no-unused-expressions */
+/* global describe, it */
+
+var unit = require('../index.js');
 var math = require('mathjs');
 var jstat = require('jstat').jStat;
-var should = require('should');
+var should = require('should');  // eslint-disable-line no-unused-vars
 
-describe('PoissonProcess', function () {
+describe('poissonProcess', function () {
 
   describe('#create', function () {
     it('should be a function', function () {
@@ -13,21 +17,21 @@ describe('PoissonProcess', function () {
     it('should require an interval and a function', function () {
       (function () {
         unit.create(100, {});
-      }).should.throw(unit.TriggerFunctionError);
+      }).should.throw();
 
       (function () {
         unit.create('100');
-      }).should.throw(unit.IntervalError);
+      }).should.throw();
 
       (function () {
         unit.create();
-      }).should.throw(unit.IntervalError);
+      }).should.throw();
     });
 
     it('should not accept negative interval', function () {
       (function () {
-        unit.create(-100, function () {})
-      }).should.throw(unit.IntervalError);
+        unit.create(-100, function () {});
+      }).should.throw();
     });
 
     it('should accept zero interval', function (done) {
@@ -60,11 +64,14 @@ describe('PoissonProcess', function () {
     var alpha = 0.05;  // 100(1 - alpha)% confidence interval
     var rate = 2;
     var samples = [];
-    var i;
 
-    for (i = 0; i < N; i += 1) {
-      samples.push(unit.sample(1 / rate));
-    }
+    (function generateSamples() {
+      var i;
+      for (i = 0; i < N; i += 1) {
+        samples.push(unit.sample(1 / rate));
+      }
+    }());
+
 
     it('should have correct mean', function () {
       var sampleMean = math.mean(samples);
@@ -73,7 +80,7 @@ describe('PoissonProcess', function () {
       // 95% Confidence intervals for mean of exponential variables
       // https://en.wikipedia.org/wiki/Exponential_distribution
       // #Confidence_intervals
-      var percLo = jstat.chisquare.inv(1 - alpha / 2, 2 * N);
+      var percLo = jstat.chisquare.inv(1 - (alpha / 2), 2 * N);
       var percHi = jstat.chisquare.inv(alpha / 2, 2 * N);
       var meanLo = 2 * N * sampleMean / percLo;
       var meanHi = 2 * N * sampleMean / percHi;
@@ -95,7 +102,6 @@ describe('PoissonProcess', function () {
       var estimateOfPopVariance = sampleMean * sampleMean;
       var popMeanIfGeneratorIsOk = 1 / rate;
       var popVarianceIfGeneratorIsOk = 1 / (rate * rate);
-      var difference = Math.abs(sampleVariance * estimateOfPopVariance);
 
       console.log('----');
 
@@ -137,13 +143,6 @@ describe('PoissonProcess', function () {
 
       var meanIntervalSize = 10;  // this many events in one interval in average
       var intervalWidth = meanIntervalSize / rate;
-
-      var sum = function (k) {
-        // Sum until k:th element.
-        // sum(0) = 0.
-        // sum(1) = value of first element
-        return math.sum(samples.slice(0, k));
-      };
 
       var total = function () {
         return math.sum(samples);
@@ -235,7 +234,7 @@ describe('PoissonProcess', function () {
       };
 
       var m = numberOfNonEmptyIntervals(intervalWidth);
-      var l;
+      var l, p, b;
 
       var bins = [];
       var intervals = [];
@@ -259,7 +258,8 @@ describe('PoissonProcess', function () {
 
       var iSize = math.mean(intervals);  // interval size sample mean
       console.log('sample mean of # of events in an interval:', iSize);
-      console.log('popul. mean of # of events in an interval:', meanIntervalSize);
+      console.log('popul. mean of # of events in an interval:',
+                  meanIntervalSize);
 
       console.log('----');
       for (b = 0; b < bins.length; b += 1) {
@@ -310,7 +310,7 @@ describe('PoissonProcess', function () {
     });
   });
 
-  it('should have a version with the format #.#.#', function() {
+  it('should have a version with the format #.#.#', function () {
     unit.version.should.match(/^\d+\.\d+\.\d+$/);
   });
 });

@@ -15,16 +15,16 @@ var interval = 500;
 
 // Here we define the function that we are about to call after each interval.
 // In other words, we are defining the process.
-var p = PoissonProcess.create(interval, function () {
+var p = poissonProcess.create(interval, function () {
 
   // If you are looking at the developer console, you will see these ticks.
   console.log('tick');
 
   // We change the background color according to the current color state.
   if (bgState) {
-    bg.style.backgroundColor = 'mediumblue';
+    bg.style.backgroundColor = '#6666FF';
   } else {
-    bg.style.backgroundColor = 'blue';
+    bg.style.backgroundColor = '#0000FF';
   }
 
   // We change the color state.

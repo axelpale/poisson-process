@@ -1,7 +1,7 @@
 {
   "name": "poisson-process",
-  "version": "0.2.3",
-  "description": "Call functions in naturally varying time intervals to improve realism and natural unpredictability in games or animations.",
+  "version": "1.0.0",
+  "description": "Generate naturally varying time intervals to improve realism in games and to prevent thundering herds in distributed systems",
   "keywords": [
     "random",
     "timer",
@@ -9,10 +9,14 @@
     "stochastic",
     "simulation",
     "latency",
-    "animation"
+    "animation",
+    "generator",
+    "poisson",
+    "process"
   ],
   "homepage": "https://github.com/axelpale/poisson-process",
-  "main": "poisson-process.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": {
     "name": "Akseli Palen",
     "email": "akseli.palen@gmail.com"
@@ -24,17 +28,17 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^4.3.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
+    "eslint": "^4.8.0",
+    "genversion": "^1.1.2",
     "jstat": "^1.5.3",
     "mathjs": "^3.12.3",
-    "should": "^13.0.1"
+    "mocha": "^4.0.0",
+    "should": "^13.0.1",
+    "webpack": "^3.6.0"
   },
   "scripts": {
-    "build": "gulp",
-    "test": "gulp test"
+    "build": "genversion lib/version.js && eslint . && mocha && webpack",
+    "lint": "eslint .",
+    "test": "mocha"
   }
 }

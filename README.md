@@ -1,4 +1,4 @@
-# poisson-process.js<sup>v0.2.3</sup>
+# poisson-process.js
 
 [![npm](https://img.shields.io/npm/v/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
 ![dependencies](https://img.shields.io/badge/dependencies-none-green.svg?style=flat) [![licence](https://img.shields.io/npm/l/poisson-process.svg?style=flat)](https://www.npmjs.com/package/poisson-process)
@@ -21,25 +21,29 @@ In the animation above, the blue cars drive by in constant time intervals and th
 
 ### Browsers
 
-    <script src="scripts/poisson-process.js"></script>
+First download [poisson-process.min.js](https://unpkg.com/poisson-process/dist/poisson-process.min.js) and then:
+
+    <script src="poisson-process.min.js"></script>
 
 ### Node.js & CommonJS
 
-    $ npm install poisson-process
-    ---
-    > var PoissonProcess = require('poisson-process');
+First `$ npm install poisson-process` and then:
+
+    var poissonProcess = require('poisson-process');
 
 ### AMD & Require.js
 
-    > define(['scripts/poisson-process'], function (PoissonProcess) { ... });
+First download [poisson-process.min.js](https://unpkg.com/poisson-process/dist/poisson-process.min.js) and then:
+
+    define(['scripts/poisson-process'], function (poissonProcess) { ... });
 
 
 
-## Usage 
+## Usage
 
 It is simple; you specify an __average call interval__ in milliseconds, a __function to be called__ and then __start__ the process.
 
-    > var p = PoissonProcess.create(500, function message() {
+    > var p = poissonProcess.create(500, function message() {
       console.log('A message arrived.')
     })
     > p.start()
@@ -52,15 +56,15 @@ The process is paused by:
 
 If you desire just numbers, generate intervals by:
 
-    > PoissonProcess.sample(500)
+    > poissonProcess.sample(500)
     389.33242512
-    > PoissonProcess.sample(500)
+    > poissonProcess.sample(500)
     506.58621391
 
 
 ## API
 
-### PoissonProcess.create(averageIntervalMs, triggerFunction)
+### poissonProcess.create(averageIntervalMs, triggerFunction)
 
 The `create` constructor takes in two parameters. The `averageIntervalMs` is an integer and the average interval in milliseconds to call the `triggerFunction`. The `triggerFunction` takes no parameters and does not have to return anything.
 
@@ -80,15 +84,15 @@ Stop the process; do not anymore call the `triggerFunction`.
 
     p.stop()
 
-### PoissonProcess.sample(average)
+### poissonProcess.sample(average)
 
 The `sample` provides a raw access to the underlying generator for the call intervals. It returns a number; a sample from the exponential distribution with the rate `1 / average`.
 
-    > PoissonProcess.sample(500)
+    > poissonProcess.sample(500)
     323.02...
-    > PoissonProcess.sample(500)
+    > poissonProcess.sample(500)
     returns 941.33...
-    > PoissonProcess.sample(500)
+    > poissonProcess.sample(500)
     returns 609.86...
 
 
@@ -108,7 +112,7 @@ A detailed and __enjoyable introduction__ to the theory is given by [Jeff Preshi
 
 ## Notes for developers
 
-Run tests with `$ npm test`. Build with `$ npm run build`.
+Run tests with `$ npm test`. Build bundle and sourcemaps with `$ npm run build`.
 
 
 

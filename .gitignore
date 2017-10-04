@@ -1,3 +1,7 @@
+# Bundle builds
+/dist/*
+!/dist/.gitkeep
+
 # Logs
 logs
 *.log

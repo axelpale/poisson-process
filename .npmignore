@@ -1,0 +1,7 @@
+.eslintignore
+.eslintrc.js
+
+/doc
+/examples
+/test
+/webpack.config.js
