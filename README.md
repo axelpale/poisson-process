@@ -68,7 +68,7 @@ If you desire just numbers, generate intervals by:
 
 The `create` constructor takes in two parameters. The `averageIntervalMs` is an integer and the average interval in milliseconds to call the `triggerFunction`. The `triggerFunction` takes no parameters and does not have to return anything.
 
-    var p = PoissonProcess.create(500, function message() {
+    var p = poissonProcess.create(500, function message() {
       console.log('A message arrived.')
     })
 
