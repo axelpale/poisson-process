@@ -5,10 +5,9 @@
 
 A JavaScript library to generate naturally varying time intervals. It __improves realism and natural unpredictability in your games or animations__ like aliens walking by a window, or cars trying to drive over your character on a busy road. It __removes bottlenecks in distributed systems__ by adding [jitter](http://highscalability.com/blog/2012/4/17/youtube-strategy-adding-jitter-isnt-a-bug.html) that prevents [thundering herd problem](https://en.wikipedia.org/wiki/Thundering_herd_problem). It can also simulate the frequency of chat messages, page loads or arriving emails as well as queues, traffic and earthquakes. The underlying mathematical concept is called the [Poisson process](https://en.wikipedia.org/wiki/Poisson_process).
 
-![Constant vs Poisson process](../master/doc/cars.gif?raw=true)
+![Constant vs Poisson process](doc/cars.gif?raw=true)
 
-In the animation above, the blue cars drive by in constant time intervals and the red ones in more natural, randomized intervals typical for the Poisson process.
-
+*In the animation above, the blue cars drive by in constant time intervals and the red ones in more natural, randomized intervals typical for the Poisson process.*
 
 [Examples](#examples) – [Installation](#installation) – [Usage](#usage) – [API](#api) – [Theory](#theory) – [Contribute](#contribute)
 
@@ -20,19 +19,19 @@ In the animation above, the blue cars drive by in constant time intervals and th
 
 ## Installation
 
-### Browsers
-
-First download [poisson-process.min.js](https://unpkg.com/poisson-process/dist/poisson-process.min.js) and then:
-
-    <script src="poisson-process.min.js"></script>
-
 ### Node.js & CommonJS
 
 First `$ npm install poisson-process` and then:
 
     var poissonProcess = require('poisson-process');
 
-### AMD & Require.js
+### Browsers
+
+First download [poisson-process.min.js](https://unpkg.com/poisson-process/dist/poisson-process.min.js) and then:
+
+    <script src="poisson-process.min.js"></script>
+
+### Require.js & Async Module Definition AMD
 
 First download [poisson-process.min.js](https://unpkg.com/poisson-process/dist/poisson-process.min.js) and then:
 
@@ -49,7 +48,7 @@ It is simple; you specify an __average call interval__ in milliseconds, a __func
     })
     > p.start()
 
-Now the `message` function will be called each 500 milliseconds __in average__. The delay from a previous call can vary from near 0 milliseconds to a time that is significantly longer than the given average, even though the both ends are increasingly unlikely.
+Now the `message` function will be called each 500 milliseconds __in average__. The delay from a previous call can vary from near 0 milliseconds to a time that is significantly longer than the given average, even though the extremes are increasingly unlikely.
 
 The process is paused by:
 
@@ -92,7 +91,9 @@ Stop the process; do not anymore call the `triggerFunction`.
 
 ### poissonProcess.sample(average)
 
-The `sample` provides a raw access to the underlying generator for the call intervals. It returns a number; a sample from the exponential distribution with the rate `1 / average`.
+The `sample` generates time intervals of Poisson distributed events. It returns a number; a sample from the exponential distribution with the rate `1 / average`.
+
+Note the difference between Poisson distribution and its interval distribution. Where a sample of Poisson distribution would represent a number of events happening within a fixed time window, its interval distribution represents the time between the events. The `sample` method implements the latter.
 
     > poissonProcess.sample(500)
     323.02...
