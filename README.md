@@ -124,4 +124,4 @@ Run tests with `$ npm test`. Build bundle and sourcemaps with `$ npm run build`.
 
 ## License
 
-[MIT License](../blob/master/LICENSE)
+[MIT License](LICENSE)
