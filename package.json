@@ -1,6 +1,6 @@
 {
   "name": "poisson-process",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate naturally varying time intervals to improve realism in games and to prevent thundering herds in distributed systems",
   "keywords": [
     "random",
@@ -26,10 +26,9 @@
     "url": "git://github.com/axelpale/poisson-process.git"
   },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^4.8.0",
-    "genversion": "^1.1.2",
+    "genversion": "^3.0.2",
     "jstat": "^1.5.3",
     "mathjs": "^3.12.3",
     "mocha": "^4.0.0",
@@ -37,7 +36,7 @@
     "webpack": "^3.6.0"
   },
   "scripts": {
-    "build": "genversion lib/version.js && eslint . && mocha && webpack",
+    "build": "genversion --semi lib/version.js && eslint . && mocha && webpack",
     "lint": "eslint .",
     "test": "mocha"
   }
