@@ -110,9 +110,11 @@ A detailed and __enjoyable introduction__ to the theory is given by [Jeff Preshi
 
 
 
-## Notes for developers
+## Contribute
 
-Run tests with `$ npm test`. Build bundle and sourcemaps with `$ npm run build`.
+Issues and pull request are warmly welcome. Run tests with `$ npm test` before submitting.
+
+Build bundle and source maps with `$ npm run build`.
 
 
 
