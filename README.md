@@ -61,6 +61,11 @@ If you desire just numbers, generate intervals by:
     > poissonProcess.sample(500)
     506.58621391
 
+The chart below displays distribution of 10000 samples taken with the average interval of 500 milliseconds. The samples are grouped in 100 ms bins and the samples above 1500 ms are not charted. While 18 % of the samples are below 100 ms, the long tail of the large intervals balances the distribution at the average of 500 ms.
+
+![10k samples at average of 500 ms](doc/samples-10k-at-500ms.png)
+
+*Chart: Shape of the distribution. 10000 samples grouped in 100 ms wide bins.*
 
 ## API
 
