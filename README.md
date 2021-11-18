@@ -10,6 +10,7 @@ A JavaScript library to generate naturally varying time intervals. It __improves
 In the animation above, the blue cars drive by in constant time intervals and the red ones in more natural, randomized intervals typical for the Poisson process.
 
 
+[Examples](#examples) – [Installation](#installation) – [Usage](#usage) – [API](#api) – [Theory](#theory) – [Contribute](#contribute)
 
 ## Examples
 
